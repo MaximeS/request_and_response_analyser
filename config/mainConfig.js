@@ -1,5 +1,5 @@
 var actualDate=new Date()
-var fullDate=""+actualDate.getDay()+"-"+actualDate.getMonth()+"-"+actualDate.getFullYear()+"_"+actualDate.getHours()+"-"+actualDate.getMinutes()+"-"+actualDate.getSeconds()
+var fullDate=""+actualDate.getDate()+"-"+(actualDate.getMonth()+1)+"-"+actualDate.getFullYear()+"_"+actualDate.getHours()+"-"+actualDate.getMinutes()+"-"+actualDate.getSeconds()
 module.exports={
     "usemainconfig":true,
     "port":9999,
