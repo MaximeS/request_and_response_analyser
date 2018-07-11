@@ -1,0 +1,23 @@
+module.exports={
+    "app":false,
+    "baseUrl":false,
+    "body":true,
+    "cookies":true,
+    "fresh":false,
+    "hostname":false,
+    "ip":true,
+    "ips":false,
+    "method":true,
+    "originalUrl":true,
+    "params":true,
+    "path":false,
+    "protocol":true,
+    "query":true,
+    "route":false,
+    "secure":true,
+    "signedCookies":true,
+    "stale":true,
+    "subdomains":true,
+    "xhr":true,
+    "secret":""
+}
