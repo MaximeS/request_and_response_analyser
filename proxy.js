@@ -30,9 +30,9 @@ if (mainConfig.usemainconfig) {
     var response_message = mainConfig.response_message
     var input_files = mainConfig.input_files
     var specific_filepath = mainConfig.specific_filepath
-    var filepath = mainConfig.filepath
+    var filepath = specific_filepath?mainConfig.filepath:"."
     var specific_filename = mainConfig.specific_filename
-    var filename = mainConfig.filename
+    var filename = mainConfig.specific_filename?mainConfig.filename:""
     var useNumber=mainConfig.useNumber
 }
 else {
@@ -60,9 +60,18 @@ else {
         if (specific_filepath) {
             var filepath = (readline.question("Which path do you want for your files?\n"))
         }
+        else
+        {
+            var filepath="."
+        }
         var specific_filename = readline.question("Do you want a specific filename?(Answer y/n)\n") == "y" ? true : false
         if (specific_filename) {
             var filename = readline.question("Which name do you want?(It'll be name+req+number.log and name+res+number.log)\n")
+            var useNumber= readline.question("Do you want to use the request number?(Starts at 1)(Answer y/n)")=="y"?true:false
+        }
+        else
+        {
+            var filename =""
             var useNumber= readline.question("Do you want to use the request number?(Starts at 1)(Answer y/n)")=="y"?true:false
         }
     }
