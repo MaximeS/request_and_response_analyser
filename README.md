@@ -69,3 +69,42 @@ module.exports={
   filename is the name you want to input before req or res on your log files names. Don't mind it if specific_filename and/or input_files is false.
   
   useNumber is whether you want to use numbers in filename to log separatly each request/response.
+  
+  ### request.js
+  ``` Javascript
+  module.exports={
+    "app":false,
+    "baseUrl":false,
+    "body":true,
+    "cookies":true,
+    "fresh":false,
+    "hostname":false,
+    "ip":true,
+    "ips":false,
+    "method":true,
+    "originalUrl":true,
+    "params":true,
+    "path":false,
+    "protocol":true,
+    "query":true,
+    "route":false,
+    "secure":true,
+    "signedCookies":true,
+    "stale":true,
+    "subdomains":true,
+    "xhr":true,
+    "secret":""
+}
+  ```
+  This file represents the request info (things that "are not useful" are not listed nor checked).Check true if you want any info on something.
+  
+  ### response.js
+  ``` Javascript
+  module.exports={
+    "app":true,
+    "headers":true,
+    "locals":true,
+    "data":true
+}
+```
+  This file represents the response info (things that "are not useful" are not listed nor checked).Check true if you want any info on something.
