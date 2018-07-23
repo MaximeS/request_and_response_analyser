@@ -120,3 +120,25 @@ app.all(path_to_test, function (req, res) {
 })
 
 app.listen(port)
+
+console.log("Server started. Call it on http://localhost:"+port+(path_to_test=="*"?"/":path_to_test))
+
+var show_config = readline.question("Do you want to show all the config options?(Answer y/n)")=="y"?true:false;
+if(show_config)
+{
+    console.log("mainConfig \n")
+    console.log("Port : "+port)
+    console.log("Path : "+path_to_test)
+    console.log("Analyze request : "+analyze_request)
+    console.log("Redirect query : "+redirect)
+    console.log("Redirect path : "+server)
+    console.log("Analyze response : "+analyze_response)
+    console.log("Response code : "+response_code)
+    console.log("Response message : "+response_message)
+    console.log("Input into files : "+input_files)
+    console.log("Specific filepath : "+specific_filepath)
+    console.log("Filepath : "+filepath)
+    console.log("Specific filename : "+specific_filename)
+    console.log("Filename : "+filename)
+    console.log("Use numbers in filename : "+useNumber)
+}
